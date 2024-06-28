@@ -3,7 +3,6 @@ import React, { Component } from "react";
 export default class Navbar extends Component {
   render() {
     const toggleMenu = () => {
-      console.log("btn clicked");
       const hamburgerBtn = document.getElementById("hamburger-button");
       const mobileMenu = document.getElementById("mobile-menu");
       mobileMenu.classList.toggle("hidden");
