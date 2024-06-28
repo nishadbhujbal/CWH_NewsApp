@@ -13,37 +13,35 @@ export default class Navbar extends Component {
 
     return (
       <>
-        <div>
-          <nav className="bg-[#151218] flex justify-between items-center md:justify-around text-white">
-            <div className="p-4 font-semibold">NewsMonkey</div>
-            <div>
-              <button
-                id="hamburger-button"
-                className="p-2 text-3xl md:hidden cursor-pointer"
-                onClick={toggleMenu}
-              >
-                &#9776;
-              </button>
-            </div>
+        <nav className="bg-[#151218] flex justify-between items-center md:justify-around text-white">
+          <div className="p-4 font-semibold">NewsMonkey</div>
+          <div>
+            <button
+              id="hamburger-button"
+              className="p-2 text-3xl md:hidden cursor-pointer"
+              onClick={toggleMenu}
+            >
+              &#9776;
+            </button>
+          </div>
 
-            <ul className="hidden md:flex gap-4 pl-4 text-white cursor-pointer">
-              <li className="hover:bg-gradient-to-r hover:from-[#fc907e] hover:via-[#9f6eed] hover:to-[#fc907e] hover:bg-clip-text hover:text-transparent">
-                Home
-              </li>
-              <li className="hover:bg-gradient-to-r hover:from-[#fc907e] hover:via-[#9f6eed] hover:to-[#fc907e] hover:bg-clip-text hover:text-transparent">
-                About
-              </li>
-            </ul>
-            <div className="hidden md:flex items-center gap-4">
-              <button className="hover:bg-gradient-to-r hover:from-[#fc907e] hover:via-[#9f6eed] hover:to-[#fc907e] hover:bg-clip-text hover:text-transparent">
-                Login
-              </button>
-              <button className="bg-gradient-to-r from-pink-500 to-rose-500 text-white w-[80%] rounded-3xl p-2 font-semibold text-sm">
-                Contact us
-              </button>
-            </div>
-          </nav>
-        </div>
+          <ul className="hidden md:flex gap-4 pl-4 text-white cursor-pointer">
+            <li className="hover:bg-gradient-to-r hover:from-[#fc907e] hover:via-[#9f6eed] hover:to-[#fc907e] hover:bg-clip-text hover:text-transparent">
+              Home
+            </li>
+            <li className="hover:bg-gradient-to-r hover:from-[#fc907e] hover:via-[#9f6eed] hover:to-[#fc907e] hover:bg-clip-text hover:text-transparent">
+              About
+            </li>
+          </ul>
+          <div className="hidden md:flex items-center gap-4">
+            <button className="hover:bg-gradient-to-r hover:from-[#fc907e] hover:via-[#9f6eed] hover:to-[#fc907e] hover:bg-clip-text hover:text-transparent">
+              Login
+            </button>
+            <button className="bg-gradient-to-r from-pink-500 to-rose-500 text-white w-[80%] rounded-3xl p-2 font-semibold text-sm">
+              Contact us
+            </button>
+          </div>
+        </nav>
         <div
           id="mobile-menu"
           className="absolute top-0 text-3xl w-full flex-col origin-top animate-open-menu hidden"
