@@ -9,7 +9,7 @@ export class NewsItem extends Component {
           <img alt="" src={imageUrl} className="h-56 w-full object-cover" />
 
           <div className="p-4 sm:p-6">
-            <a href="#">
+            <a href="/">
               <h3 className="text-lg font-medium text-gray-900">{title}</h3>
             </a>
 
@@ -18,8 +18,9 @@ export class NewsItem extends Component {
             </p>
 
             <a
-              href="/newsdetail/"
+              href={newsUrl}
               className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600"
+              target="_blank"
             >
               Find out more
               <span
