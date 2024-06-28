@@ -8,7 +8,7 @@ export class News extends Component {
         <h1 className="font-semibold text-2xl text-center pb-2">
           NewsMonkey - Top Headlines2
         </h1>
-        <div className="w-full h-screen flex flex-col pl-4 gap-4 sm:flex-row sm:flex-wrap border border-black">
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
           <NewsItem></NewsItem>
           <NewsItem></NewsItem>
           <NewsItem></NewsItem>
