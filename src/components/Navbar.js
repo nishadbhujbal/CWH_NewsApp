@@ -47,7 +47,7 @@ export default class Navbar extends Component {
         </nav>
         <div
           id="mobile-menu"
-          className="absolute bg-white top-0 text-3xl w-full flex-col origin-top animate-open-menu hidden"
+          className="absolute top-0 text-3xl w-full flex-col origin-top animate-open-menu hidden"
         >
           <button
             className="text-3xl self-end p-2 text-white"

@@ -25,6 +25,7 @@ export class News extends Component {
   }
 
   handlePrevClick = async () => {
+    this.setState(window.scrollTo(0, 0));
     let url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=c3ccaecb001a45e0864b03adcc94ca9c&page=${
       this.state.page - 1
     }&pageSize=${this.props.pageSize}`;
@@ -39,6 +40,7 @@ export class News extends Component {
   };
 
   handleNextClick = async () => {
+    this.setState(window.scrollTo(0, 0));
     if (!(this.state.page + 1 > Math.ceil(this.state.totalResults / 20))) {
       let url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=c3ccaecb001a45e0864b03adcc94ca9c&page=${
         this.state.page + 1
