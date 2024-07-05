@@ -69,13 +69,18 @@ export class News extends Component {
         </div>
         <div className="flex justify-evenly items-center gap-4 my-4">
           <button
+            id="prev"
             className="bg-blue-700 rounded-md p-2 text-white"
             onClick={this.handlePrevClick}
             disabled={this.state.page <= 1}
+            style={{
+              opacity: this.state.page <= 1 ? "0.7" : "1",
+            }}
           >
             &larr; Previous
           </button>
           <button
+            id="next"
             className="bg-blue-700 rounded-md p-2 text-white"
             onClick={this.handleNextClick}
           >
