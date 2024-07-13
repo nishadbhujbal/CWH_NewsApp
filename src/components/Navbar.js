@@ -12,7 +12,7 @@ export default class Navbar extends Component {
 
     return (
       <>
-        <nav className="bg-[#151218] flex justify-between items-center md:justify-around text-white">
+        <nav className="bg-[#151218] flex justify-between items-center md:justify-around text-white md:px-6 md:py-2">
           <div className="w-full flex justify-between md:w-[50%]">
             <div className="p-4 font-semibold">NewsMonkey</div>
             <div>
