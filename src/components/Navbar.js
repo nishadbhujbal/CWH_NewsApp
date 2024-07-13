@@ -27,9 +27,9 @@ export default class Navbar extends Component {
 
     return (
       <>
-        <nav className="bg-[#151218] flex justify-evenly items-center md:justify-center text-white md:px-6 md:py-2">
-          <div className="w-full flex justify-between md:w-[50%]">
-            <div className="p-4 font-semibold">NewsMonkey</div>
+        <nav className="bg-[#151218] flex justify-between items-center md:justify-center text-white md:px-6 md:py-2">
+          <div className="w-full flex justify-between md:w-auto lg:w-[25%]">
+            <div className="p-4 md:p-2 font-semibold">NewsMonkey</div>
             <div>
               <button
                 id="hamburger-button"
@@ -41,7 +41,7 @@ export default class Navbar extends Component {
             </div>
           </div>
 
-          <div className="items-center justify-between w-[50%] hidden md:flex">
+          <div className="items-center justify-between w-full md:w-auto lg:w-[75%] hidden md:flex">
             <ul className="flex gap-4 pl-4 text-white cursor-pointer">
               {this.state.articles.map((element) => {
                 return (
@@ -76,8 +76,13 @@ export default class Navbar extends Component {
             aria-label="mobile"
           >
             <ul className="flex flex-col gap-8 pl-4 text-sm">
-              <li>Home</li>
-              <li>About</li>
+              {this.state.articles.map((element) => {
+                return (
+                  <li className="hover:bg-gradient-to-r hover:from-[#fc907e] hover:via-[#9f6eed] hover:to-[#fc907e] hover:bg-clip-text hover:text-transparent">
+                    {element}
+                  </li>
+                );
+              })}
             </ul>
             <div className="flex justify-center">
               <button className="bg-gradient-to-r from-pink-500 to-rose-500 text-white w-[30%] rounded-3xl p-2 font-semibold mt-6 text-sm">
