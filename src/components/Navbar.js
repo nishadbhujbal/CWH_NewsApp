@@ -1,6 +1,21 @@
 import React, { Component } from "react";
 
 export default class Navbar extends Component {
+  constructor() {
+    super();
+    this.state = {
+      articles: [
+        "Business",
+        "Health",
+        "Sports",
+        "Technology",
+        "Science",
+        "Entertainment",
+        "General",
+      ],
+    };
+  }
+
   render() {
     const toggleMenu = () => {
       const hamburgerBtn = document.getElementById("hamburger-button");
@@ -12,7 +27,7 @@ export default class Navbar extends Component {
 
     return (
       <>
-        <nav className="bg-[#151218] flex justify-between items-center md:justify-around text-white md:px-6 md:py-2">
+        <nav className="bg-[#151218] flex justify-evenly items-center md:justify-center text-white md:px-6 md:py-2">
           <div className="w-full flex justify-between md:w-[50%]">
             <div className="p-4 font-semibold">NewsMonkey</div>
             <div>
@@ -28,12 +43,13 @@ export default class Navbar extends Component {
 
           <div className="items-center justify-between w-[50%] hidden md:flex">
             <ul className="flex gap-4 pl-4 text-white cursor-pointer">
-              <li className="hover:bg-gradient-to-r hover:from-[#fc907e] hover:via-[#9f6eed] hover:to-[#fc907e] hover:bg-clip-text hover:text-transparent">
-                Home
-              </li>
-              <li className="hover:bg-gradient-to-r hover:from-[#fc907e] hover:via-[#9f6eed] hover:to-[#fc907e] hover:bg-clip-text hover:text-transparent">
-                About
-              </li>
+              {this.state.articles.map((element) => {
+                return (
+                  <li className="hover:bg-gradient-to-r hover:from-[#fc907e] hover:via-[#9f6eed] hover:to-[#fc907e] hover:bg-clip-text hover:text-transparent">
+                    {element}
+                  </li>
+                );
+              })}
             </ul>
             <div className="flex items-center gap-4">
               <button className="hover:bg-gradient-to-r hover:from-[#fc907e] hover:via-[#9f6eed] hover:to-[#fc907e] hover:bg-clip-text hover:text-transparent">
